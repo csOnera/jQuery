@@ -1,0 +1,37 @@
+body {
+    padding: 2em;
+}
+  
+#container {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    animation: spin 20s linear infinite;
+}
+  
+.field {
+    width: auto;
+    height: 100px;
+    position: absolute;
+    /* animation-name: moving;
+    animation-duration: calc(var(--d)*3);
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in; */
+    animation: spin 20s linear infinite reverse, moving calc(var(--d)*3) ease-in infinite;
+}
+
+@keyframes moving {
+    0% {transform: translate(-10px,-10px);}
+    12.5% {transform: translate(-13px,0px);}
+    25% {transform: translate(-10px,10px);}
+    /* 37.5% {transform: translate(0px,0px);} */
+    50% {transform: translate(10px,-10px);}
+    62.5% {transform: translate(13px,0px);}
+    75% {transform: translate(10px,10px);}
+    /* 87.5% {transform: translate(0px,0px);} */
+    100% {transform: translate(-10px,-10px);}
+}
+
+@keyframes spin {
+    100% {transform: rotate(1turn);}
+}
