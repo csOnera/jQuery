@@ -3,15 +3,15 @@ body {
 }
 
 #spacer {
-    height: 100vh;
+    height: 50vh;
     width: auto;
     background-color: aliceblue;
     display: block;
 }
   
 .container{
-    width: 600px;
-    height: 600px;
+    width: 100vw;
+    height: 100vw;
     position: relative;
     /* background-color: black; */
     border-radius: 50%;
