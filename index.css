@@ -6,6 +6,8 @@ body {
     width: 600px;
     height: 600px;
     position: relative;
+    /* background-color: black; */
+    border-radius: 50%;
     animation: spin 20s linear infinite;
 }
   
@@ -17,8 +19,19 @@ body {
     animation-duration: calc(var(--d)*3);
     animation-iteration-count: infinite;
     animation-timing-function:ease-in; */
-    animation: spin 20s linear infinite reverse, moving calc(var(--d)*3) ease-in infinite;
+    /* animation:  moving calc(var(--d)*3) ease-in 2s infinite */
+    animation: spin 20s linear infinite reverse;
+    transition: height 1s;
 }
+
+.field:hover {
+    height: 150px
+}
+
+/* #container:hover, #container:hover > .field{
+    animation-duration: 5s;
+    
+} */
 
 @keyframes moving {
     0% {transform: translate(-10px,-10px);}
