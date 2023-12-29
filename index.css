@@ -1,20 +1,33 @@
 body {
     padding: 2em;
 }
+
+#spacer {
+    height: 100vh;
+    width: auto;
+    background-color: aliceblue;
+    display: block;
+}
   
-#container {
+.container{
     width: 600px;
     height: 600px;
     position: relative;
     /* background-color: black; */
     border-radius: 50%;
     animation: spin 20s linear infinite;
+    transition: 1s;
+    opacity: 0;
+}
+.container.active{
+    opacity: 1;
 }
   
-.field {
+.container .field {
     width: auto;
     height: 100px;
     position: absolute;
+    border-radius: 5px;
     /* animation-name: moving;
     animation-duration: calc(var(--d)*3);
     animation-iteration-count: infinite;
@@ -24,7 +37,7 @@ body {
     transition: height 1s;
 }
 
-.field:hover {
+.container .field:hover {
     height: 150px
 }
 
